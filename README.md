@@ -16,7 +16,7 @@ This BOOTCAMPERS GUIDE will help you set up an SSH agent and generate SSH keys f
   - [Starting SSH Agent (Linux/Unix)](#starting-ssh-agent-linuxunix)
   - [Generating SSH Keys (Linux/Unix)](#generating-ssh-keys-linuxunix)
   - [Adding SSH Keys to GitHub and GitLab (Linux/Unix)](#adding-ssh-keys-to-github-and-gitlab-linuxunix)
-
+- [Student Note about SSH Security](#student-note)
 
 # Introduction
 
