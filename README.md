@@ -17,6 +17,8 @@ This BOOTCAMPERS GUIDE will help you set up an SSH agent and generate SSH keys f
   - [Generating SSH Keys (Linux/Unix)](#generating-ssh-keys-linuxunix)
   - [Adding SSH Keys to GitHub and GitLab (Linux/Unix)](#adding-ssh-keys-to-github-and-gitlab-linuxunix)
 - [Student Note about SSH Security](#student-note)
+- [Future Additions](#future-additions)
+
 
 # Introduction
 
@@ -195,3 +197,13 @@ This BOOTCAMPERS GUIDE will help you set up an SSH agent and generate SSH keys f
 
 # STUDENT NOTE:
 It is okay to create SSH keys without passwords, but it is **NOT** best practice, especially when dealing with sensitive information. For simplicity while learning, it is recommended to start without a passphrase. However, different organizations will require you to periodically create new SSH keys when you work with their data in the future.
+
+# Future Additions
+
+Creating SSH Keys: Before adding them to GitHub or GitLab, users need to generate an SSH key pair on their local machine. This needs to be highlighted and explained so that the process makes sense.
+
+Periodic Key Rotation: Periodic SSH key rotation is an important security practice. It might be helpful to suggest or provide guidelines on rotating SSH keys
+
+Platform-Specific Instructions: The instructions are specific to the web interfaces of GitHub and GitLab as of the last update. It's always a good idea to mention that these steps can change if the platforms update their UI or policies.
+
+Verification: After adding an SSH key to GitHub or GitLab, users might want to verify that their setup works by attempting to clone a repository using SSH instead of HTTPS. This step ensures that their SSH configuration is correct and will be covered in future breakdowns, but it would be good to place a link or a brief explanation here now to allow users to verify before they consider the job complete. 
