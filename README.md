@@ -9,16 +9,22 @@ This BOOTCAMPERS GUIDE will help you set up an SSH agent and generate SSH keys f
 
 ## Table of Contents
 
+## Table of Contents
 - [Git-Guide-Project](#git-guide-project)
 - [Bootcampers Guide to Setting Up SSH Agent and Generating SSH Keys for GitHub and GitLab](#bootcampers-guide-to-setting-up-ssh-agent-and-generating-ssh-keys-for-github-and-gitlab)
   - [Table of Contents](#table-of-contents)
+  - [Table of Contents](#table-of-contents-1)
   - [Introduction](#introduction)
   - [Windows Setup](#windows-setup)
     - [Starting SSH Agent (Windows)](#starting-ssh-agent-windows)
     - [Generating SSH Keys (Windows)](#generating-ssh-keys-windows)
-  - [Generating SSH Keys (Linux/Unix)](#generating-ssh-keys-linuxunix)
+  - [Linux/Unix Setup](#linuxunix-setup)
+    - [Generating SSH Keys](#generating-ssh-keys)
+    - [Save the key and set a passphrase:](#save-the-key-and-set-a-passphrase)
+    - [Add your SSH key to the SSH agent:](#add-your-ssh-key-to-the-ssh-agent)
   - [Adding SSH Keys to GitHub and GitLab (Linux/Unix)](#adding-ssh-keys-to-github-and-gitlab-linuxunix)
 - [STUDENT NOTE:](#student-note)
+
 
 ## Introduction
 
@@ -140,9 +146,9 @@ Once you've generated your SSH keys, you need to add them to your GitHub and Git
 
    - **Explanation:** This command starts the SSH agent and sets the necessary environment variables.
 
-## Generating SSH Keys (Linux/Unix)
+## Linux/Unix Setup
 
-1. **Generate a new SSH key:**
+### Generating SSH Keys
    
    ```bash
    ssh-keygen -t ed25519 -C "your_email@example.com"
@@ -151,13 +157,13 @@ Once you've generated your SSH keys, you need to add them to your GitHub and Git
    - **Explanation:** This command generates a new SSH key using the Ed25519 algorithm, which is more secure and faster. Replace `"your_email@example.com"` with your email address.
   
 
-2. **Save the key and set a passphrase:**
+### Save the key and set a passphrase:
    
    - When prompted to "Enter a file in which to save the key," press `Enter` to accept the default location.
    - When prompted to "Enter passphrase," type a secure passphrase. You can leave it empty, but it is recommended to use a passphrase for added security.
   
 
-3. **Add your SSH key to the SSH agent:**
+### Add your SSH key to the SSH agent:
    
    ```bash
    ssh-add ~/.ssh/id_ed25519
