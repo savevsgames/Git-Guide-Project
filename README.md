@@ -1,71 +1,65 @@
 # Git-Guide-Project
 A repo with instructions on how to use GitHub and GitLab that can be improved upon by the community.
 
-This currently only contains one guide, setting up keys and connecting them to the remote hosts.  
+This currently only contains one guide, setting up keys and connecting them to the remote hosts.
 
-# Bootcampers Guide to Setting Up SSH Agent and Generating SSH Keys for GitHub and GitLab
+## Bootcampers Guide to Setting Up SSH Agent and Generating SSH Keys for GitHub and GitLab
 
 This BOOTCAMPERS GUIDE will help you set up an SSH agent and generate SSH keys for use with GitHub and GitLab. The guide will provide step-by-step instructions for both Windows and Linux/Unix systems. It is assumed you have no prior knowledge of the subject.
 
 ## Table of Contents
-
-## Table of Contents
 - [Git-Guide-Project](#git-guide-project)
-- [Bootcampers Guide to Setting Up SSH Agent and Generating SSH Keys for GitHub and GitLab](#bootcampers-guide-to-setting-up-ssh-agent-and-generating-ssh-keys-for-github-and-gitlab)
+  - [Bootcampers Guide to Setting Up SSH Agent and Generating SSH Keys for GitHub and GitLab](#bootcampers-guide-to-setting-up-ssh-agent-and-generating-ssh-keys-for-github-and-gitlab)
   - [Table of Contents](#table-of-contents)
-  - [Table of Contents](#table-of-contents-1)
-  - [Introduction](#introduction)
-  - [Windows Setup](#windows-setup)
-    - [Starting SSH Agent (Windows)](#starting-ssh-agent-windows)
-    - [Generating SSH Keys (Windows)](#generating-ssh-keys-windows)
-  - [Linux/Unix Setup](#linuxunix-setup)
-    - [Generating SSH Keys (Linux/Unix)](#generating-ssh-keys-linuxunix)
-    - [Save the key and set a passphrase (Linux/Unix)](#save-the-key-and-set-a-passphrase-linuxunix)
-    - [Add your SSH key to the SSH agent (Linux/Unix)](#add-your-ssh-key-to-the-ssh-agent-linuxunix)
+- [Introduction](#introduction)
+- [Windows Setup](#windows-setup)
+  - [Starting SSH Agent (Windows)](#starting-ssh-agent-windows)
+  - [Generating SSH Keys (Linux/Unix)](#generating-ssh-keys-linuxunix)
+  - [Save the key and set a passphrase (Linux/Unix)](#save-the-key-and-set-a-passphrase-linuxunix)
+  - [Add your SSH key to the SSH agent (Linux/Unix)](#add-your-ssh-key-to-the-ssh-agent-linuxunix)
   - [Adding SSH Keys to GitHub and GitLab (Linux/Unix)](#adding-ssh-keys-to-github-and-gitlab-linuxunix)
 - [STUDENT NOTE:](#student-note)
 
+# Introduction
 
-## Introduction
+**Explanation:** SSH (Secure Shell) keys allow you to securely connect to your GitHub and GitLab accounts without repeatedly entering your username and password. We'll use the Git Bash terminal on Windows and the terminal on Linux/Unix systems.
 
-- **Explanation**: SSH (Secure Shell) keys allow you to securely connect to your GitHub and GitLab accounts without repeatedly entering your username and password. We'll use the Git Bash terminal on Windows and the terminal on Linux/Unix systems.
+# Windows Setup
 
-## Windows Setup
-
-### Starting SSH Agent (Windows)
+## Starting SSH Agent (Windows)
 
 1. **Open Git Bash Terminal:**
    - Open VS Code.
-   - Press [Ctrl + `] (backtick) to open the integrated terminal. You can also access the terminal from the header menu in VS Code. 
-   - Type `bash` and press `Enter` to switch to Git Bash if it is not already selected. You can also create a new bash terminal by clicking the plus sign in the upper-right corner of the terminal menu.   
+   - Press [Ctrl + `] (backtick) to open the integrated terminal. You can also access the terminal from the header menu in VS Code.
+   - Type `bash` and press `Enter` to switch to Git Bash if it is not already selected. You can also create a new bash terminal by clicking the plus sign in the upper-right corner of the terminal menu.
 
 2. **Start the SSH agent:**
    ```bash 
    eval $(ssh-agent -s)
-   ```
 
-**Explanation:** - These two lines set the necessary environment variables and start the SSH agent.
 
-### Generating SSH Keys (Windows)
+    **Explanation:** - These two lines set the necessary environment variables and start the SSH agent.
+
+## Generating SSH Keys (Windows)
 
 1. **Generate a new SSH key:**
    ```bash
    ssh-keygen -t ed25519 -C "your_email@example.com"
     ```
-- **Explanation**: This command generates a new SSH key using the Ed25519 algorithm, which is more secure and faster. Replace - "your_email@example.com" with your email address and do not use quotation marks. 
+   - **Explanation**: This command generates a new SSH key using the Ed25519 algorithm, which is more secure and faster. Replace - "your_email@example.com" with your email address and do not use quotation marks. 
 
 
-Save the key and set a passphrase:
+    Save the key and set a passphrase:
 
-When prompted to "Enter a file in which to save the key," **press Enter to accept the default location**.
-When prompted to "Enter passphrase," type a secure passphrase. You can leave it empty, but it is recommended to use a passphrase for added security.
+    When prompted to "Enter a file in which to save the key," **press Enter to accept the default location**.
+    When prompted to "Enter passphrase," type a secure passphrase. You can leave it empty, but it is recommended to use a passphrase for added security.
 
-### STUDENT NOTE:
-It is okay to create SSH keys without passwords, but it is **NOT** best practice, especially when dealing with sensitive information. For simplicity while learning, it is recommended to start without a passphrase. However, different organizations will require you to periodically create new SSH keys when you work with their data in the future.
+    **STUDENT NOTE:**
+    It is okay to create SSH keys without passwords, but it is **NOT** best practice, especially when dealing with sensitive information. For simplicity while learning, it is recommended to start without a passphrase. However, different organizations will require you to periodically create new SSH keys when you work with their data in the future.
 
-### Locating Your SSH Keys and Folder (Windows)
+## Locating Your SSH Keys and Folder (Windows)
 
-After generating your SSH keys, you can find them in the default directory where SSH keys are stored.
+    After generating your SSH keys, you can find them in the default directory where SSH keys are stored.
 
 1. **Open Git Bash Terminal:**
    - Open VS Code.
@@ -76,7 +70,7 @@ After generating your SSH keys, you can find them in the default directory where
    ```bash
    cd ~/.ssh
    ```
-- **Explanation:** This command **change**s the current **directory** to the .ssh directory, which is where your SSH keys are stored.
+   - **Explanation:** This command **change**s the current **directory** to the .ssh directory, which is where your SSH keys are stored.
 
 3. List the files in the .ssh directory:
     ```bash
@@ -91,14 +85,15 @@ After generating your SSH keys, you can find them in the default directory where
     ```
 
     If you want to view the files you have created in a Windows explorer window, in your Git Bash Terminal, type the following command:
+
     ```bash
     explorer.exe .
     ```
 
-- **Explanation:** This command opens the current directory (which should be .ssh) in File Explorer, allowing you to view your SSH key files in a graphical interface.
+   - **Explanation:** This command opens the current directory (which should be .ssh) in File Explorer, allowing you to view your SSH key files in a graphical interface.
 
 
-### Adding SSH Keys to GitHub and GitLab (Windows)
+## Adding SSH Keys to GitHub and GitLab (Windows)
 
 Once you've generated your SSH keys, you need to add them to your GitHub and GitLab accounts to enable secure access.
 
@@ -129,7 +124,6 @@ Once you've generated your SSH keys, you need to add them to your GitHub and Git
     - Paste your key into the "Key" field and give it a descriptive title.
     - Click Add key.
 
-
 # Linux/Unix Setup
 
 ## Starting SSH Agent (Linux/Unix)
@@ -146,9 +140,7 @@ Once you've generated your SSH keys, you need to add them to your GitHub and Git
 
    - **Explanation:** This command starts the SSH agent and sets the necessary environment variables.
 
-## Linux/Unix Setup
-
-### Generating SSH Keys (Linux/Unix)
+## Generating SSH Keys (Linux/Unix)
    
    ```bash
    ssh-keygen -t ed25519 -C "your_email@example.com"
@@ -157,13 +149,15 @@ Once you've generated your SSH keys, you need to add them to your GitHub and Git
    - **Explanation:** This command generates a new SSH key using the Ed25519 algorithm, which is more secure and faster. Replace `"your_email@example.com"` with your email address.
   
 
-### Save the key and set a passphrase (Linux/Unix)
+## Save the key and set a passphrase (Linux/Unix)
    
    - When prompted to "Enter a file in which to save the key," press `Enter` to accept the default location.
    - When prompted to "Enter passphrase," type a secure passphrase. You can leave it empty, but it is recommended to use a passphrase for added security.
+   - **STUDENT NOTE:**
+    It is okay to create SSH keys without passwords, but it is **NOT** best practice, especially when dealing with sensitive information. For simplicity while learning, it is recommended to start without a passphrase. However, different organizations will require you to periodically create new SSH keys when you work with their data in the future.
   
 
-### Add your SSH key to the SSH agent (Linux/Unix)
+## Add your SSH key to the SSH agent (Linux/Unix)
    
    ```bash
    ssh-add ~/.ssh/id_ed25519
