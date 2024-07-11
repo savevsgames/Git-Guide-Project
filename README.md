@@ -16,9 +16,9 @@ This BOOTCAMPERS GUIDE will help you set up an SSH agent and generate SSH keys f
   - [Windows Setup](#windows-setup)
     - [Starting SSH Agent (Windows)](#starting-ssh-agent-windows)
     - [Generating SSH Keys (Windows)](#generating-ssh-keys-windows)
-    - [Generating SSH Keys (Linux/Unix)](#generating-ssh-keys-linuxunix)
-    - [Adding SSH Keys to GitHub and GitLab (Linux/Unix)](#adding-ssh-keys-to-github-and-gitlab-linuxunix)
-    - [STUDENT NOTE:](#student-note)
+  - [Generating SSH Keys (Linux/Unix)](#generating-ssh-keys-linuxunix)
+  - [Adding SSH Keys to GitHub and GitLab (Linux/Unix)](#adding-ssh-keys-to-github-and-gitlab-linuxunix)
+- [STUDENT NOTE:](#student-note)
 
 ## Introduction
 
@@ -124,9 +124,9 @@ Once you've generated your SSH keys, you need to add them to your GitHub and Git
     - Click Add key.
 
 
-## Linux/Unix Setup
+# Linux/Unix Setup
 
-### Starting SSH Agent (Linux/Unix)
+## Starting SSH Agent (Linux/Unix)
 
 1. **Open Terminal:**
    
@@ -140,7 +140,7 @@ Once you've generated your SSH keys, you need to add them to your GitHub and Git
 
    - **Explanation:** This command starts the SSH agent and sets the necessary environment variables.
 
-### Generating SSH Keys (Linux/Unix)
+## Generating SSH Keys (Linux/Unix)
 
 1. **Generate a new SSH key:**
    
@@ -166,7 +166,7 @@ Once you've generated your SSH keys, you need to add them to your GitHub and Git
    - **Explanation:** This command adds the SSH private key to the SSH agent so that it can manage your keys.
   
 
-### Adding SSH Keys to GitHub and GitLab (Linux/Unix)
+## Adding SSH Keys to GitHub and GitLab (Linux/Unix)
 
 1. **Copy your SSH key to the clipboard:**
    
@@ -195,7 +195,7 @@ Once you've generated your SSH keys, you need to add them to your GitHub and Git
    - Click **Add key**.
 
 
-### STUDENT NOTE:
+# STUDENT NOTE:
 It is okay to create SSH keys without passwords, but it is **NOT** best practice, especially when dealing with sensitive information. For simplicity while learning, it is recommended to start without a passphrase. However, different organizations will require you to periodically create new SSH keys when you work with their data in the future.
 ```
 
