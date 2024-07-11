@@ -22,7 +22,7 @@ This BOOTCAMPERS GUIDE will help you set up an SSH agent and generate SSH keys f
 
 # Introduction
 
-**Explanation:** SSH (Secure Shell) keys allow you to securely connect to your GitHub and GitLab accounts without repeatedly entering your username and password. We'll use the Git Bash terminal on Windows and the terminal on Linux/Unix systems.
+    **Explanation:** SSH (Secure Shell) keys allow you to securely connect to your GitHub and GitLab accounts without repeatedly entering your username and password. We'll use the Git Bash terminal on Windows and the terminal on Linux/Unix systems.
 
 # Windows Setup
 
@@ -95,7 +95,7 @@ This BOOTCAMPERS GUIDE will help you set up an SSH agent and generate SSH keys f
 
 ## Adding SSH Keys to GitHub and GitLab (Windows)
 
-Once you've generated your SSH keys, you need to add them to your GitHub and GitLab accounts to enable secure access.
+    Once you've generated your SSH keys, you need to add them to your GitHub and GitLab accounts to enable secure access.
 
 1. **Copy your SSH key to the clipboard:**
 
@@ -123,6 +123,9 @@ Once you've generated your SSH keys, you need to add them to your GitHub and Git
     - In the left sidebar, click on SSH Keys.
     - Paste your key into the "Key" field and give it a descriptive title.
     - Click Add key.
+  
+
+
 
 # Linux/Unix Setup
 
