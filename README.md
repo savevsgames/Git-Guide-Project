@@ -19,9 +19,9 @@ This BOOTCAMPERS GUIDE will help you set up an SSH agent and generate SSH keys f
     - [Starting SSH Agent (Windows)](#starting-ssh-agent-windows)
     - [Generating SSH Keys (Windows)](#generating-ssh-keys-windows)
   - [Linux/Unix Setup](#linuxunix-setup)
-    - [Generating SSH Keys](#generating-ssh-keys)
-    - [Save the key and set a passphrase:](#save-the-key-and-set-a-passphrase)
-    - [Add your SSH key to the SSH agent:](#add-your-ssh-key-to-the-ssh-agent)
+    - [Generating SSH Keys (Linux/Unix)](#generating-ssh-keys-linuxunix)
+    - [Save the key and set a passphrase (Linux/Unix)](#save-the-key-and-set-a-passphrase-linuxunix)
+    - [Add your SSH key to the SSH agent (Linux/Unix)](#add-your-ssh-key-to-the-ssh-agent-linuxunix)
   - [Adding SSH Keys to GitHub and GitLab (Linux/Unix)](#adding-ssh-keys-to-github-and-gitlab-linuxunix)
 - [STUDENT NOTE:](#student-note)
 
@@ -148,7 +148,7 @@ Once you've generated your SSH keys, you need to add them to your GitHub and Git
 
 ## Linux/Unix Setup
 
-### Generating SSH Keys
+### Generating SSH Keys (Linux/Unix)
    
    ```bash
    ssh-keygen -t ed25519 -C "your_email@example.com"
@@ -157,13 +157,13 @@ Once you've generated your SSH keys, you need to add them to your GitHub and Git
    - **Explanation:** This command generates a new SSH key using the Ed25519 algorithm, which is more secure and faster. Replace `"your_email@example.com"` with your email address.
   
 
-### Save the key and set a passphrase:
+### Save the key and set a passphrase (Linux/Unix)
    
    - When prompted to "Enter a file in which to save the key," press `Enter` to accept the default location.
    - When prompted to "Enter passphrase," type a secure passphrase. You can leave it empty, but it is recommended to use a passphrase for added security.
   
 
-### Add your SSH key to the SSH agent:
+### Add your SSH key to the SSH agent (Linux/Unix)
    
    ```bash
    ssh-add ~/.ssh/id_ed25519
