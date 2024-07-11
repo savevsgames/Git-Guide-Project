@@ -8,17 +8,15 @@ This currently only contains one guide, setting up keys and connecting them to t
 This BOOTCAMPERS GUIDE will help you set up an SSH agent and generate SSH keys for use with GitHub and GitLab. The guide will provide step-by-step instructions for both Windows and Linux/Unix systems. It is assumed you have no prior knowledge of the subject.
 
 ## Table of Contents
-- [Git-Guide-Project](#git-guide-project)
-  - [Bootcampers Guide to Setting Up SSH Agent and Generating SSH Keys for GitHub and GitLab](#bootcampers-guide-to-setting-up-ssh-agent-and-generating-ssh-keys-for-github-and-gitlab)
-  - [Table of Contents](#table-of-contents)
-- [Introduction](#introduction)
 - [Windows Setup](#windows-setup)
   - [Starting SSH Agent (Windows)](#starting-ssh-agent-windows)
+  - [Generating SSH Keys (Windows)](#generating-ssh-keys-windows)
+  - [Adding SSH Keys to GitHub and GitLab (Windows)](#adding-ssh-keys-to-github-and-gitlab-windows)
+- [Linux/Unix Setup](#linuxunix-setup)
+  - [Starting SSH Agent (Linux/Unix)](#starting-ssh-agent-linuxunix)
   - [Generating SSH Keys (Linux/Unix)](#generating-ssh-keys-linuxunix)
-  - [Save the key and set a passphrase (Linux/Unix)](#save-the-key-and-set-a-passphrase-linuxunix)
-  - [Add your SSH key to the SSH agent (Linux/Unix)](#add-your-ssh-key-to-the-ssh-agent-linuxunix)
   - [Adding SSH Keys to GitHub and GitLab (Linux/Unix)](#adding-ssh-keys-to-github-and-gitlab-linuxunix)
-- [STUDENT NOTE:](#student-note)
+
 
 # Introduction
 
@@ -124,9 +122,6 @@ This BOOTCAMPERS GUIDE will help you set up an SSH agent and generate SSH keys f
     - Paste your key into the "Key" field and give it a descriptive title.
     - Click Add key.
   
-
-
-
 # Linux/Unix Setup
 
 ## Starting SSH Agent (Linux/Unix)
@@ -200,6 +195,3 @@ This BOOTCAMPERS GUIDE will help you set up an SSH agent and generate SSH keys f
 
 # STUDENT NOTE:
 It is okay to create SSH keys without passwords, but it is **NOT** best practice, especially when dealing with sensitive information. For simplicity while learning, it is recommended to start without a passphrase. However, different organizations will require you to periodically create new SSH keys when you work with their data in the future.
-```
-
-This section provides detailed instructions for setting up the SSH agent and generating and adding SSH keys on Linux/Unix systems, along with the student note for additional context.
